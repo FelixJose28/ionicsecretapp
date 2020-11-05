@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -13,7 +14,8 @@ const routes: Routes = [
   },
   {
     path: 'registro',
-    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule),
+    
   },
   {
     path: 'loggin',
@@ -25,11 +27,12 @@ const routes: Routes = [
   },
   {
     path: 'todosecretos',
-    loadChildren: () => import('./pages/todosecretos/todosecretos.module').then( m => m.TodosecretosPageModule)
+    loadChildren: () => import('./pages/todosecretos/todosecretos.module').then( m => m.TodosecretosPageModule),
   },
   {
     path: 'cambiarclave',
-    loadChildren: () => import('./pages/cambiarclave/cambiarclave.module').then( m => m.CambiarclavePageModule)
+    loadChildren: () => import('./pages/cambiarclave/cambiarclave.module').then( m => m.CambiarclavePageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'registrarsecreto',
