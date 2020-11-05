@@ -9,20 +9,20 @@
     <ion-row >
       <ion-title class="ion-text-center" >Loggearse</ion-title>
       <ion-col size="10" >
+        <form (submit)="logginUser()">
+            <ion-item  >
+              <ion-label position="stacked" >Correo</ion-label>
+              <ion-input [(ngModel)]="user.correo" [ngModelOptions]="{standalone: true}" ></ion-input>
+            </ion-item>
 
-        <ion-item  >
-          <ion-label position="stacked">Correo</ion-label>
-          <ion-input ></ion-input>
-        </ion-item>
-
-        <ion-item>
-          <ion-label position="stacked" >Clave</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
+            <ion-item>
+              <ion-label position="stacked" >Clave</ion-label>
+              <ion-input [(ngModel)]="user.clave" [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
 
 
-          <ion-button expand="full" color="danger">Loggin</ion-button>
-
+              <ion-button expand="full" type="submit" color="danger">Loggin</ion-button>
+        </form>
       </ion-col>
     </ion-row>
   </ion-grid>

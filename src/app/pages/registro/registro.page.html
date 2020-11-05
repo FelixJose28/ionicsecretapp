@@ -9,30 +9,30 @@
     <ion-row >
       <ion-title class="ion-text-center" >Registrar Cuenta</ion-title>
       <ion-col size="10" >
+        <form (submit)="registrarUser()">
+          <ion-item  >
+            <ion-label position="stacked" >Correo</ion-label>
+            <ion-input [(ngModel)]="user.correo" [ngModelOptions]="{standalone: true}" ></ion-input>
+          </ion-item>
 
-        <ion-item  >
-          <ion-label position="stacked" >Correo</ion-label>
-          <ion-input ></ion-input>
-        </ion-item>
+          <ion-item>
+            <ion-label position="stacked"  >Nombre</ion-label>
+            <ion-input [(ngModel)]="user.nombre" [ngModelOptions]="{standalone: true}"></ion-input>
+          </ion-item>
 
-        <ion-item>
-          <ion-label position="stacked"  >Nombre</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
+          <ion-item>
+            <ion-label position="stacked" >Clave</ion-label>
+            <ion-input [(ngModel)]="user.clave" [ngModelOptions]="{standalone: true}"></ion-input>
+          </ion-item>
 
-        <ion-item>
-          <ion-label position="stacked" >Clave</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-
-        <ion-item>
-            <ion-label position="stacked">Repetir clave</ion-label>
-            <ion-input></ion-input>
-        </ion-item>
+          <ion-item>
+              <ion-label position="stacked">Repetir clave</ion-label>
+              <ion-input [(ngModel)]="samepass" [ngModelOptions]="{standalone: true}"></ion-input>
+          </ion-item>
 
 
-          <ion-button expand="full" color="danger">Registrar Cuenta</ion-button>
-
+            <ion-button type="submit" expand="full" color="danger">Registrar Cuenta</ion-button>
+        </form>
       </ion-col>
     </ion-row>
   </ion-grid>
