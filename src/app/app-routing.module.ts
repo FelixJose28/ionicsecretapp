@@ -22,12 +22,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/loggin/loggin.module').then( m => m.LogginPageModule)
   },
   {
-    path: 'secretoindividual',
-    loadChildren: () => import('./pages/secretoindividual/secretoindividual.module').then( m => m.SecretoindividualPageModule)
-  },
-  {
     path: 'todosecretos',
     loadChildren: () => import('./pages/todosecretos/todosecretos.module').then( m => m.TodosecretosPageModule),
+  },
+  
+  {
+    path: 'secretoindividual',
+    loadChildren: () => import('./pages/secretoindividual/secretoindividual.module').then( m => m.SecretoindividualPageModule),
   },
   {
     path: 'cambiarclave',
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'registrarsecreto',
     loadChildren: () => import('./pages/registrarsecreto/registrarsecreto.module').then( m => m.RegistrarsecretoPageModule)
+  },
+  {
+    path: 'secretoindividual',
+    loadChildren: () => import('./pages/secretoindividual/secretoindividual.module').then( m => m.SecretoindividualPageModule)
   },
 ];
 

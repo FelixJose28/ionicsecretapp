@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-secretoindividual',
@@ -10,6 +10,16 @@ export class SecretoindividualPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  @Input() secre 
+
+  @Output() borrar = new EventEmitter<number>()
+
+  Borrar(id) {
+    console.log('asd')
+    this.borrar.emit(id)
   }
 
 }
