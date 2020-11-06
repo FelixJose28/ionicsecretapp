@@ -10,8 +10,7 @@ import { SecretosService } from 'src/app/services/secretos.service';
 export class TodosecretosPage implements OnInit {
 
   secret = []
-
-
+  
   constructor(private router: Router,
               private secretoService: SecretosService) { }
 
