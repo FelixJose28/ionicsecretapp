@@ -3,10 +3,42 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/todosecretos"></ion-back-button>
     </ion-buttons>
-    <ion-title>cambiarclave</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-grid>
+    <ion-row  class="ion-margin-top" >
+      <ion-title class="ion-text-center">Actualizar Clave</ion-title>
+      <ion-col size="12"  class="" >
+        <div>
+          <form  id="elementos">
+              <ion-item>
+                <ion-label  position="stacked" >Clave actual</ion-label>
+                <ion-input required type="email" class="text-input"  [(ngModel)]="newp.clave" [ngModelOptions]="{standalone: true}" ></ion-input>
+              </ion-item>
+
+              <ion-item >
+                <ion-label position="stacked" >Clave nueva</ion-label>
+                <ion-input required type="password" [(ngModel)]="newp.newpass" [ngModelOptions]="{standalone: true}"></ion-input>
+              </ion-item>
+
+              <ion-item >
+                <ion-label position="stacked" >Repetir clave nueva</ion-label>
+                <ion-input required type="password" [(ngModel)]="verificarPass" [ngModelOptions]="{standalone: true}"></ion-input>
+              </ion-item>
+
+
+                <ion-button expand="full" (click)="changePass()" type="submit" color="danger">Aplicar</ion-button>
+          </form>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
 
 </ion-content>

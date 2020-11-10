@@ -13,7 +13,10 @@ export class AuthService {
               private router: Router,
               private alertController: AlertController,
               private modalController: ModalController) { }
-
+  getUser(token) {
+    return this.http.get<any>(this.URL + '/user?token=' + token)
+  }
+  
   authregistrar(user){
     return this.http.post<any>(this.URL+'/registrar',user);
   }
@@ -53,5 +56,8 @@ export class AuthService {
   }
   authCambiarDatos(user){
     return this.http.put<any>(this.URL+'/modificardatosusuario/'+user.id,user)
+  }
+  updatePass(user) {
+    return this.http.put<any>(this.URL + '/cambiarClave/' + localStorage.getItem('token'), user)
   }
 }

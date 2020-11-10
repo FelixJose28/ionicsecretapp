@@ -4,4 +4,5 @@ export interface Iusuario {
     correo?: string
     clave?: string
     token?: string
+    newpass?: string
 }
