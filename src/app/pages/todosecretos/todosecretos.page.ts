@@ -22,6 +22,9 @@ export class TodosecretosPage implements OnInit {
   ngOnInit(): void {
     this.getSecretos()
   }
+  ionViewWillEnter(){
+    this.getSecretos()
+  }
 
   async openModal() {
     const modal = await this.modalController.create({

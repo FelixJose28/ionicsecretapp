@@ -1,6 +1,6 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title slot="end" color="primary" (click)="closeModal()">Cerrar</ion-title>
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-title slot="end" color="" (click)="closeModal()">Cerrar</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,7 +14,7 @@
       <ion-icon name="reader-outline"></ion-icon>
       <ion-text class="ion-margin-start">Cambiar datos</ion-text>
     </ion-item>
-    <ion-item (click)="authService.authLogout()" (click)="closeModal()" >
+    <ion-item (click)="authService.authLogout()" >
       <ion-icon name="close-outline"></ion-icon>
       <ion-text class="ion-margin-start">Cerrar Sesion</ion-text>
     </ion-item>
