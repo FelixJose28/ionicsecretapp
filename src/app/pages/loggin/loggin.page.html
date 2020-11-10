@@ -3,29 +3,30 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title>loggin</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-grid >
-    <ion-row >
+  <ion-grid>
+    <ion-row  class="ion-margin-top" >
       <ion-title class="ion-text-center" >Loggearse</ion-title>
-      <ion-col size="10" >
-        <form (submit)="logginUser()">
-            <ion-item  >
-              <ion-label position="stacked" >Correo</ion-label>
-              <ion-input [(ngModel)]="user.correo" [ngModelOptions]="{standalone: true}" ></ion-input>
-            </ion-item>
+      <ion-col size="8"  class="" >
+        <div>
+          <form (submit)="logginUser()">
+              <ion-item class="ion-margin-top ">
+                <ion-label  position="stacked" >Correo</ion-label>
+                <ion-input class="text-input"  [(ngModel)]="user.correo" [ngModelOptions]="{standalone: true}" ></ion-input>
+              </ion-item>
 
-            <ion-item>
-              <ion-label position="stacked" >Clave</ion-label>
-              <ion-input [(ngModel)]="user.clave" [ngModelOptions]="{standalone: true}"></ion-input>
-            </ion-item>
+              <ion-item class="">
+                <ion-label position="stacked" >Clave</ion-label>
+                <ion-input [(ngModel)]="user.clave" [ngModelOptions]="{standalone: true}"></ion-input>
+              </ion-item>
 
 
-              <ion-button expand="full" type="submit" color="danger">Loggin</ion-button>
-        </form>
+                <ion-button expand="full" class="ion-margin-top ion-text-center" type="submit" color="danger">Loggin</ion-button>
+          </form>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>

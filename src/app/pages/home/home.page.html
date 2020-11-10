@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-title>Secret App</ion-title>
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button (click)="openModal()">
         <ion-icon name="globe"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -10,10 +10,8 @@
 </ion-header>
 
 <ion-content>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <ion-title>Desea registrar un secreto?<a routerLink="loggin">Click aqui</a></ion-title>
+
+  <ion-title>Desea registrar un secreto?
+    <a routerLink="/todosecretos">Click aqui</a>
+  </ion-title>
 </ion-content>

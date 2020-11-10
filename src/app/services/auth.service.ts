@@ -29,7 +29,7 @@ export class AuthService {
   authLogout(){
     if(window.confirm('Desea cerrar la session??')){
       localStorage.removeItem('token')
-      this.router.navigate['/loggin']
+      this.router.navigate(['/home'])
     }
   }
   authCambiarDatos(user){

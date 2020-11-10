@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="end" color="primary" (click)="closeModal()">Cerrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item routerLink="/cambiarclave" (click)="closeModal()">
+      <ion-icon  name="lock-open-outline"></ion-icon>
+      <ion-text class="ion-margin-start" >Cambiar clave</ion-text>
+    </ion-item>
+    <ion-item routerLink="/cambiarclave" (click)="closeModal()">
+      <ion-icon name="reader-outline"></ion-icon>
+      <ion-text class="ion-margin-start">Cambiar datos</ion-text>
+    </ion-item>
+    <ion-item (click)="authService.authLogout()" (click)="closeModal()" >
+      <ion-icon name="close-outline"></ion-icon>
+      <ion-text class="ion-margin-start">Cerrar Sesion</ion-text>
+    </ion-item>
+  </ion-list>
+</ion-content>

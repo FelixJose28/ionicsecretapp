@@ -24,11 +24,13 @@ const routes: Routes = [
   {
     path: 'todosecretos',
     loadChildren: () => import('./pages/todosecretos/todosecretos.module').then( m => m.TodosecretosPageModule),
+    canActivate: [AuthGuard]
   },
   
   {
     path: 'secretoindividual',
     loadChildren: () => import('./pages/secretoindividual/secretoindividual.module').then( m => m.SecretoindividualPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'cambiarclave',
@@ -41,7 +43,13 @@ const routes: Routes = [
   },
   {
     path: 'secretoindividual',
-    loadChildren: () => import('./pages/secretoindividual/secretoindividual.module').then( m => m.SecretoindividualPageModule)
+    loadChildren: () => import('./pages/secretoindividual/secretoindividual.module').then( m => m.SecretoindividualPageModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'mymodel',
+    loadChildren: () => import('./pages/mymodel/mymodel.module').then( m => m.MymodelPageModule),
+    canActivate: [AuthGuard]
   },
 ];
 
